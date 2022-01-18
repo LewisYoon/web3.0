@@ -57,7 +57,7 @@ export const TransactionProvider = ({ children }) => {
           })
         );
 
-        console.log(structuredTransactions);
+  
 
         setTransactions(structuredTransactions);
       } else {
@@ -107,6 +107,8 @@ export const TransactionProvider = ({ children }) => {
         method: "eth_requestAccounts",
       });
       setCurrentAccount(accounts[0]);
+      
+      window.location.reload();
     } catch (error) {
       console.log(error);
 
